@@ -19,7 +19,7 @@ const movieList = movies.map(movie => {
   return (
     <>
       <header>
-      
+      <h1>Home Page</h1>
         <NavBar />
       </header>
       <main>

@@ -18,7 +18,7 @@ const directorList = directors.map(director => {
   return (
     <article>
       <h1>{director.name}</h1>
-      <ul>{director.movies}</ul>
+      <li>{director.movies}</li>
     </article>
   )
 })
@@ -34,8 +34,7 @@ const directorList = directors.map(director => {
           <h2>
           {directorList}
           </h2>
-          <ul>
-          </ul>
+          
         </article>
       </main>
     </>

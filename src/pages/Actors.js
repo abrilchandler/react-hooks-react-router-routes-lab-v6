@@ -11,17 +11,22 @@ function Actors() {
       .then((data) => setActors(data))
   }, [actors]);
 
+
+
   const actorList = actors.map(actor => {
     return (
       <article>
         <h2>{actor.name}</h2>
         <a href={`/actors/${actor.id}`}>View details</a>
       <ul>
-        {actor.movies}
+        {actor.movies.map(movie => {
+          return <li>{movie}</li> 
+          })}
       </ul>
       </article>
     )
   })
+ 
 
   return (
     <>
@@ -31,9 +36,9 @@ function Actors() {
       </header>
       <main>
         <article>
-          <ul>
+          <li>
           {actorList}
-          </ul>
+          </li>
         </article>
        
       </main>
